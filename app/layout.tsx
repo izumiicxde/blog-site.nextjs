@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-pt-[3.5rem] scroll-smooth">
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.variable)}>
         <Provider>
           <div className="relative min-h-dvh flex flex-col bg-background">

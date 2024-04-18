@@ -7,7 +7,6 @@ export default async function BlogPage() {
 
     const sortedPosts = sortPosts(posts.filter(post => post.published))
     const displayPosts = sortedPosts
-    console.log({ posts });
 
 
     return (

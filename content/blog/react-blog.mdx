@@ -1,0 +1,71 @@
+---
+title: React Intro
+description: First look on React.js |
+date: 2024-03-06
+published: true
+---
+
+# Getting Started with React: A Basic Tutorial
+
+React is a powerful JavaScript library for building user interfaces. In this tutorial, we'll cover the fundamentals of React and create a simple application to understand its core concepts.
+
+## Setting Up Your Environment
+
+Before we begin, ensure you have Node.js and npm (Node Package Manager) installed on your system. You can download and install them from [here](https://nodejs.org/).
+
+Once you have Node.js and npm installed, you can create a new React project using Create React App. Open your terminal and run the following command:
+
+```bash
+npx create-react-app my-react-app
+```
+
+This will create a new directory called `my-react-app` and set up a basic React project structure for you.
+
+## Creating Your First Component
+
+Now, let's create our first React component. Open the `src` directory in your project folder, and create a new file called `HelloWorld.js`. Then, add the following code to define a simple functional component:
+
+```javascript
+import React from "react";
+
+function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+
+export default HelloWorld;
+```
+
+## Using Your Component
+
+Next, let's use the `HelloWorld` component we just created in our main application. Open the `App.js` file in the `src` directory and replace its contents with the following code:
+
+```javascript
+import React from "react";
+import HelloWorld from "./HelloWorld";
+
+function App() {
+  return (
+    <div className="App">
+      <HelloWorld />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Running Your Application
+
+Now that we have our component set up, let's run our application to see it in action. In your terminal, navigate to your project folder and run the following command:
+
+```bash
+npm start
+```
+
+This will start a development server and open your default web browser to display your React application. You should see "Hello, World!" displayed on the screen.
+
+## Conclusion
+
+Congratulations! You've created your first React application and learned how to create and use a basic React component. This is just the beginning of your journey with React, and there's a lot more to explore. Stay curious and keep building!
+
+Happy coding!
