@@ -9,7 +9,7 @@
 # testing
 /coverage
 
-
+/code
 #velite
 .velite
 # next.js

@@ -1,12 +1,27 @@
 import { posts } from '#site/content'
 import { PostItem } from '@/components/PostItem'
+import { QueryPagination } from '@/components/QueryPagination';
 import { sortPosts } from '@/lib/utils';
 
+const POSTS_PER_PAGE = 4
+interface BlogPageProps {
+    searchParams: {
+        page?: string
+    }
+}
 
-export default async function BlogPage() {
+export default async function BlogPage({ searchParams }: BlogPageProps) {
 
+    const currentPage = Number(searchParams?.page) || 1
     const sortedPosts = sortPosts(posts.filter(post => post.published))
-    const displayPosts = sortedPosts
+    const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE)
+
+    const displayPosts = sortedPosts.slice(
+        POSTS_PER_PAGE * (currentPage - 1),
+        POSTS_PER_PAGE * currentPage
+    )
+
+
 
 
     return (
@@ -19,6 +34,7 @@ export default async function BlogPage() {
             </div>
             <hr className="mt-8" />
 
+            <QueryPagination totalPages={totalPages} className='justify-center my-5' />
             {displayPosts?.length > 0 ? (
                 <ul className='flex flex-col'>
                     {displayPosts?.map(post => {
@@ -33,6 +49,7 @@ export default async function BlogPage() {
             ) : (
                 <p className='flex w-full h-dvh sm:h-[50vh]  justify-center items-center text-3xl font-black'>Nothing to see here yet</p>
             )}
+
         </div>
     )
 }
