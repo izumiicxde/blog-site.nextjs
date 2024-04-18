@@ -9,7 +9,7 @@ import ModeToggle from "./ModeToggle"
 
 const SiteHeader = () => {
     return (
-        <header className="sticky top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-20">
             <div className="container flex h-14 max-w-screen-2xl items-center">
                 <MainNav />
                 <div className="flex flex-1 items-center justify-end space-x-2">
@@ -26,7 +26,7 @@ const SiteHeader = () => {
                                 <span className="sr-only">Github</span>
                             </div>
                         </Link>
-                        
+
                         <ModeToggle />
                         {/* MOBILE NAV */}
                         <MobileNav />
