@@ -32,9 +32,10 @@ export default function Home() {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center">
           Latest Posts
         </h2>
+        <hr />
         <ul className="flex flex-col">
           {latestPosts?.map((post) => (
-            <li key={post.slug} className="first:border-t first:border-border">
+            <li key={post.slug} className="transition-all hover:scale-[1.02]">
               <PostItem slug={post.slug} title={post.title} description={post.description} date={post.date} />
             </li>
           ))}

@@ -3,6 +3,32 @@ import { Mail } from "lucide-react";
 import { Icons } from "./icons";
 
 export function SiteFooter() {
+
+    const IconsArr = [
+        {
+            name: "mail",
+            href: "mailto:eren@aot.com",
+            Icon: <Mail className="w-6 h-6" />
+        },
+        {
+            name: "twitter",
+            href: siteConfig.links.twitter,
+            Icon: <Icons.twitter className="w-6 h-6" />
+        },
+        {
+            name: "github",
+            href: siteConfig.links.github,
+            Icon: <Icons.github className="w-6 h-6" />
+        },
+        {
+            name: "author",
+            href: siteConfig.links.presonalSite,
+            Icon: <span className="font-bold text-lg">{siteConfig.author}</span>
+        }
+    ];
+
+
+
     return (
         <footer>
             <div className="mb-6 mt-14 flex flex-col items-center ">

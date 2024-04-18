@@ -75,47 +75,6 @@
   }
 }
 
-/* :root {
-  --background: 127 15% 95%;
-  --foreground: 127 5% 10%;
-  --card: 127 15% 90%;
-  --card-foreground: 127 5% 15%;
-  --popover: 127 15% 95%;
-  --popover-foreground: 127 95% 10%;
-  --primary: 127 74% 19%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 127 15% 76%;
-  --secondary-foreground: 0 0% 0%;
-  --muted: 89 15% 85%;
-  --muted-foreground: 127 5% 40%;
-  --accent: 89 15% 80%;
-  --accent-foreground: 127 5% 15%;
-  --destructive: 0 50% 50%;
-  --destructive-foreground: 127 5% 90%;
-  --border: 127 20% 76%;
-  --input: 127 20% 50%;
-  --ring: 127 74% 19%;
-  --radius: 0.5rem;
+img[alt="GitHub Logo"] {
+  @apply w-full rounded-lg;
 }
-.dark {
-  --background: 127 15% 10%;
-  --foreground: 127 5% 90%;
-  --card: 127 15% 10%;
-  --card-foreground: 127 5% 90%;
-  --popover: 127 15% 5%;
-  --popover-foreground: 127 5% 90%;
-  --primary: 127 74% 19%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 127 15% 20%;
-  --secondary-foreground: 0 0% 100%;
-  --muted: 89 15% 25%;
-  --muted-foreground: 127 5% 65%;
-  --accent: 89 15% 25%;
-  --accent-foreground: 127 5% 90%;
-  --destructive: 0 50% 50%;
-  --destructive-foreground: 127 5% 90%;
-  --border: 127 20% 50%;
-  --input: 127 20% 50%;
-  --ring: 127 74% 19%;
-  --radius: 0.5rem;
-} */

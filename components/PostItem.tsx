@@ -3,6 +3,15 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { cn, formatDate } from "@/lib/utils";
 
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
+
+
 interface PostItemProps {
     slug: string;
     title: string;
@@ -11,27 +20,29 @@ interface PostItemProps {
 }
 
 export function PostItem({ title, slug, description, date }: PostItemProps) {
-    return <article className="flex flex-col gap-2 border-border border-b py-3">
-        <div className="">
-            <h2 className="text-2xl font-bold ">
-                <Link href={slug}>
+    return (
+        <Card className="flex flex-col gap-2 border-border border-b py-3 my-5 hover:shadow-lg shadow-md ">
+            <CardHeader>
+                <CardTitle>
                     {title}
-                </Link>
-            </h2>
-        </div>
-        <div className="max-w-none text-muted-foreground">{description}</div>
-        <div className="flex justify-between items-center">
-            <dl>
-                <dt className="sr-only">Published on</dt>
-                <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <time dateTime={date}>{formatDate(date)}</time>
-                </dd>
-            </dl>
-            <Link href={slug} className={cn(buttonVariants({ variant: "link" }), "py-0")}>
-                Read more.
-            </Link>
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="">
 
-        </div>
-    </article>
+                </div>
+                <div className="max-w-none text-muted-foreground">{description}</div>
+            </CardContent>
+            <CardFooter className="justify-between">
+                <dl>
+                    <dt className="sr-only">Published on</dt>
+                    <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        <time dateTime={date}>{formatDate(date)}</time>
+                    </dd>
+                </dl>
+                <Link href={slug} className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}>Read More</Link>
+            </CardFooter>
+        </Card>
+    )
 }
