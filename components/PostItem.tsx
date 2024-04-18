@@ -33,7 +33,7 @@ export function PostItem({ title, slug, description, date }: PostItemProps) {
                 </div>
                 <div className="max-w-none text-muted-foreground">{description}</div>
             </CardContent>
-            <CardFooter className="justify-between">
+            <CardFooter className="justify-between flex-wrap gap-4">
                 <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
