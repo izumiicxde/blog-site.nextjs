@@ -1,8 +1,4 @@
-Here's a simplified version of your README, with a focus on explaining the tech stack and a basic description of the blog:
-
----
-
-# My Blog Site
+# NEXT VELITE Blog site
 
 This is a personal blog site built with **Next.js** and **Velite**. The blog is designed to be fast, responsive, and easy to use, with a clean user interface.
 
